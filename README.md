@@ -166,6 +166,8 @@ canplayer -I <Input Log>
 
 #### Custom Script - SequenceFinder
 
+<a href="sequence_finder.sh">You can see the source code here.</a>
+
 Command to run SequenceFinder to find the exact sequence of the desired action from a log file :
 
 Note : This custom script will auto split a log files using head and tail, replay these in loop using CanPlayer until finding the exact sequence of the desired action and replay it with CanSend.
