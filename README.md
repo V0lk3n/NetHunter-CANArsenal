@@ -5,6 +5,12 @@ This repo is used as documentation for my CAN Arsenal addition in NetHunter apk.
 
 This module allow you to control your CAN Interface and diagnostic your car with can-utils and cannelloni tools. Device should have CAN, SLCAN, VCAN, CAN-RAW, CAN-GW, CAN-BCM enabled as module in the kernel, optionally enable USB_SERIAL_CH341 and CAN USB Interfaces Drivers too.
 
+## Prerequisite - Kernel Modification
+
+TODO
+
+## CAN Arsenal Module Documentation
+
 ## Menu
 
 <img src="/img/01-menu.jpg" alt="menu" width="500"/>
