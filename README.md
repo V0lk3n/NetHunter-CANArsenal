@@ -53,7 +53,7 @@ Prerequisite : Set "CAN Interface" and "UART Speed" in Settings
 ```bash
 modprobe -a can can-raw can-gw can-bcm
 sudo ip link set <CAN Interface> type can bitrate <UART Speed>
-sudo ip link set up <CAN Interface> && ifconfig <CAN Interface>
+sudo ip link set up <CAN Interface>
 ```
 
 Command run to Stop CAN interface :
@@ -74,7 +74,7 @@ Prerequisite : Set "CAN Interface" and "MTU" in Settings
 ```bash
 modprobe -a vcan can can-raw can-gw can-bcm
 ip link add dev <CAN Interface> type vcan && ip link set <CAN Interface> mtu <MTU>
-ip link set up <CAN Interface> && ifconfig <CAN Interface>
+ip link set up <CAN Interface>
 ```
 
 Command run to Stop VCAN interface :
@@ -90,12 +90,13 @@ sudo ip link set <CAN Interface> down
 
 Command run to Start SLCAN :
 
-Prerequisite : CAN USB Adapter plugged in and set "CAN Interface", "CAN Speed", "UART Speed" and "Flow Control" set to "hw" or "sw" in Settings
+Prerequisite : CAN USB Adapter plugged in and set "CAN Interface", "CAN Speed" and "UART Speed" in Settings
+Note : Flow Control is set to Software as default
 
 ```bash
 modprobe -a can slcan can-raw can-gw can-bcm
 sudo slcan_attach -f -s<CAN Speed> -o /dev/ttyUSB0
-sudo slcand -o -s<CAN Speed> -t <Flow Control> -S <UART Speed> /dev/ttyUSB0 <CAN Interface>
+sudo slcand -o -s<CAN Speed> -t sw -S <UART Speed> /dev/ttyUSB0 <CAN Interface>
 sudo ip link set up <CAN Interface>
 ```
 
@@ -104,9 +105,9 @@ Command run to Stop SLAN interface :
 Prerequisite : CAN USB Adapter plugged in and set "CAN Interface" in Settings
 
 ```bash
-modprobe -r can-raw can-gw can-bcm can slcan
+sudo ip link set <CAN Interface> down
 sudo slcan_attach -d /dev/ttyUSB0
-sudo ip link set <CAN Interface> down 
+modprobe -r can-raw can-gw can-bcm can slcan
 ```
 
 
