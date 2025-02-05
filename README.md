@@ -11,11 +11,15 @@ In section “Networking support”:
 
 - Select "CAN bus subsystem support"
 
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/1-kernel_can.png)
+
 Under "CAN bus subsystem support --->"
 
 - Select "Raw CAN Protocol (raw access with CAN-ID filtering)"
 - Select "Broadcast Manager CAN Protocol (with content filtering)"
 - Select "CAN Gateway/Router (with netlink configuration)"
+
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/2-kernel_can.png)
 
 Under "CAN Device Drivers --->"
 
@@ -26,9 +30,13 @@ Under "CAN Device Drivers --->"
 - Select "Enable LED triggers for Netlink based drivers"
 - Select "CAN devices debuging messages"
 
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/3-kernel_can.png)
+
 Under "CAN SPI interfaces --->"
 
 - Select "Microchip MCP251x SPI CAN controllers"
+
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/4-kernel_can.png)
 
 Under "CAN USB interfaces --->"
 
@@ -39,13 +47,14 @@ Under "CAN USB interfaces --->"
 - Select "PEAK PCAN-USB/USB Pro interfaces for CAN 2.0b/CAN-FD"
 - Select "8 devices USB2CAN interface"
 
-![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/can_kernel_modification.gif)
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/5-kernel_can.png)
 
 In section "Device Drivers ---> USB support ---> USB Serial Converter support --->" :
 
 - Select "USB Winchiphead CH341 Single Port Serial Driver"
+- Select "USB FTDI Single Port Serial Driver"
 
-![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/CH341_Driver.png)
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/Kernel/CH341_Driver.png)
 
 ## CAN Arsenal Module Documentation
 
