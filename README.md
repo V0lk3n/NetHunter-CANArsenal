@@ -21,12 +21,10 @@ Under "CAN Device Drivers --->"
 
 - Select "Virtual Local CAN Interface (vcan)"
 - Select "Serial / USB serial CAN Adaptors (slcan)"
-- Select "Plaatform CAN drivers with Netlink support"
+- Select "Platform CAN drivers with Netlink support"
 - Select "CAN bit-timing calculation"
 - Select "Enable LED triggers for Netlink based drivers"
-- Select "IFI CAN_FD IP"
-- Select "Softing Gmbh CAN generic support"
-- Select "CAN devices deubbing messages"
+- Select "CAN devices debuging messages"
 
 Under "CAN SPI interfaces --->"
 
