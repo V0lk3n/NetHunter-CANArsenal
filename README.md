@@ -47,8 +47,7 @@ Under "CAN Device Drivers --->"
 
 - Select "USB Winchiphead CH341 Single Port Serial Driver"
 
-
-<img src="/img/CH341_Driver.png" alt="CH341_driver" width="500"/>
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/CH341_Driver.png)
 
 ## CAN Arsenal Module Documentation
 
