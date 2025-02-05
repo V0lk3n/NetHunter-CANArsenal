@@ -28,11 +28,11 @@ Under "CAN Device Drivers --->"
 - Select "Softing Gmbh CAN generic support"
 - Select "CAN devices deubbing messages"
 
-- Under "CAN SPI interfaces --->"
+Under "CAN SPI interfaces --->"
 
 - Select "Microchip MCP251x SPI CAN controllers"
- 
-- Under "CAN USB interfaces --->"
+
+Under "CAN USB interfaces --->"
 
 - Select "EMS CPC-USB/ARM7 CAN/USB interface"
 - Select "ESD USB/2 CAN/USB interface"
@@ -43,7 +43,7 @@ Under "CAN Device Drivers --->"
 
 ![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/can_kernel_modification.gif)
 
-- In section "Device Drivers ---> USB support ---> USB Serial Converter support --->" :
+In section "Device Drivers ---> USB support ---> USB Serial Converter support --->" :
 
 - Select "USB Winchiphead CH341 Single Port Serial Driver"
 
