@@ -7,13 +7,54 @@ This module allow you to control your CAN Interface and diagnostic your car with
 
 ## Prerequisite - Kernel Modification
 
-TODO
+In section “Networking support”:
+
+- Select "CAN bus subsystem support"
+
+Under "CAN bus subsystem support --->"
+
+- Select "Raw CAN Protocol (raw access with CAN-ID filtering)"
+- Select "Broadcast Manager CAN Protocol (with content filtering)"
+- Select "CAN Gateway/Router (with netlink configuration)"
+
+Under "CAN Device Drivers --->"
+
+- Select "Virtual Local CAN Interface (vcan)"
+- Select "Serial / USB serial CAN Adaptors (slcan)"
+- Select "Plaatform CAN drivers with Netlink support"
+- Select "CAN bit-timing calculation"
+- Select "Enable LED triggers for Netlink based drivers"
+- Select "IFI CAN_FD IP"
+- Select "Softing Gmbh CAN generic support"
+- Select "CAN devices deubbing messages"
+
+- Under "CAN SPI interfaces --->"
+
+- Select "Microchip MCP251x SPI CAN controllers"
+ 
+- Under "CAN USB interfaces --->"
+
+- Select "EMS CPC-USB/ARM7 CAN/USB interface"
+- Select "ESD USB/2 CAN/USB interface"
+- Select "Geschwister Schneider UG interfaces"
+- Select "Kvaser CAN/USB interface"
+- Select "PEAK PCAN-USB/USB Pro interfaces for CAN 2.0b/CAN-FD"
+- Select "8 devices USB2CAN interface"
+
+![](https://github.com/V0lk3n/NetHunter-CANArsenal/blob/main/img/can_kernel_modification.gif)
+
+- In section "Device Drivers ---> USB support ---> USB Serial Converter support --->" :
+
+- Select "USB Winchiphead CH341 Single Port Serial Driver"
+
+
+<img src="/img/CH341_Driver.png" alt="CH341_driver" width="500"/>
 
 ## CAN Arsenal Module Documentation
 
 ## Menu
 
-<img src="/img/01-menu.jpg" alt="menu" width="500"/>
+<img src="/img/01-menu.jpg" alt="menu"/>
 
 #### Documentation
 
