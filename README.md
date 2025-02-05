@@ -75,15 +75,6 @@ This button will update the installed CAN tools and packages.
 These settings are needed to be used as variable while running commands with the buttons interaction.
 
 
-## Modules
-
-<img src="/img/03-modules.jpg" alt="menu" width="500"/>
-
-If these USB Modules drivers are enabled in your Kernel. You can use the dropdown to select the desired module, and press the button to load it (if unloaded) or to unload it (if loaded).
-
-Note : Full path of modules should be specified in the Modules tab of the Nethunter App.
-
-
 ## Interface
 
 <img src="/img/04-interface.jpg" alt="menu" width="500"/>
@@ -97,7 +88,6 @@ Command run to Start CAN :
 Prerequisite : Set "CAN Interface" and "UART Speed" in Settings
 
 ```bash
-modprobe -a can can-raw can-gw can-bcm
 sudo ip link set <CAN Interface> type can bitrate <UART Speed>
 sudo ip link set up <CAN Interface>
 ```
@@ -107,7 +97,6 @@ Command run to Stop CAN interface :
 Prerequisite : Set "CAN Interface" in Settings
 
 ```bash
-modprobe -r can-raw can-gw can-bcm can
 sudo ip link set <CAN Interface> down
 ```
 
@@ -118,7 +107,6 @@ Command run to Start VCAN :
 Prerequisite : Set "CAN Interface" and "MTU" in Settings
 
 ```bash
-modprobe -a vcan can can-raw can-gw can-bcm
 ip link add dev <CAN Interface> type vcan && ip link set <CAN Interface> mtu <MTU>
 ip link set up <CAN Interface>
 ```
@@ -128,7 +116,7 @@ Command run to Stop VCAN interface :
 Prerequisite : Set "CAN Interface" in Settings
 
 ```bash
-modprobe -r can-raw can-gw can-bcm vcan can
+sudo ip link delete <CAN Interface>
 sudo ip link set <CAN Interface> down 
 ```
 
@@ -140,7 +128,6 @@ Prerequisite : CAN USB Adapter plugged in and set "CAN Interface", "CAN Speed" a
 Note : Flow Control is set to Software as default
 
 ```bash
-modprobe -a can slcan can-raw can-gw can-bcm
 sudo slcan_attach -f -s<CAN Speed> -o /dev/ttyUSB0
 sudo slcand -o -s<CAN Speed> -t sw -S <UART Speed> /dev/ttyUSB0 <CAN Interface>
 sudo ip link set up <CAN Interface>
@@ -153,7 +140,6 @@ Prerequisite : CAN USB Adapter plugged in and set "CAN Interface" in Settings
 ```bash
 sudo ip link set <CAN Interface> down
 sudo slcan_attach -d /dev/ttyUSB0
-modprobe -r can-raw can-gw can-bcm can slcan
 ```
 
 
